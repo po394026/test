@@ -1,0 +1,8 @@
+all: .RScript.done
+
+.RScript.done: Functions.R Main.R
+	RScript Main.R
+	touch .RScript.done
+
+clean:
+	rm -f .RScript.done
